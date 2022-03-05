@@ -1,3 +1,6 @@
+/**
+ * collum, row
+ */
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     Currnet_Tile = tiles.locationOfSprite(The_Player)
     if (tiles.tileIs(Currnet_Tile, assets.tile`Farming Land`)) {
@@ -25,10 +28,15 @@ spriteutils.createRenderable(100, function (screen2) {
         screen2.drawRect(10, 10, 140, 100, 14)
         images.print(screen2, "Inventory", 14, 14, 15)
         screen2.fillRect(14, 24, 132, 1, 15)
+        for (let index = 0; index <= Tools.length; index++) {
+            let list: Image[] = []
+            spriteutils.drawTransparentImage(list[index], screen2, 0, 0)
+        }
     }
 })
 let Open_Invetory = false
 let Currnet_Tile: tiles.Location = null
+let Tools: Image[] = []
 let The_Player: Sprite = null
 tiles.setCurrentTilemap(tilemap`level1`)
 The_Player = sprites.create(img`
@@ -187,5 +195,5 @@ character.rule(Predicate.MovingUp)
 scene.cameraFollowSprite(The_Player)
 tiles.placeOnRandomTile(The_Player, assets.tile`Tilled Soil`)
 tiles.coverAllTiles(assets.tile`Tilled Soil`, assets.tile`Grass`)
-let Tools = [assets.image`Watering Can`, assets.image`Shovel`, assets.image`Hoe`]
-let Tool_Names = 0
+Tools = [assets.image`Watering Can`, assets.image`Shovel`, assets.image`Hoe`]
+let text_list = ["Watering Can", "Shovel", "Hoe"]
