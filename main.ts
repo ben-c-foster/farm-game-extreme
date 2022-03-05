@@ -91,7 +91,7 @@ The_Player,
     . . . . . . 4 4 . 4 4 . . . . . 
     . . . . . . 4 4 . . . . . . . . 
     `],
-100,
+200,
 character.rule(Predicate.MovingLeft)
 )
 character.loopFrames(
@@ -131,7 +131,7 @@ The_Player,
     . . . . . 4 4 . 4 4 . . . . . . 
     . . . . . 4 4 . . . . . . . . . 
     `],
-100,
+200,
 character.rule(Predicate.MovingRight)
 )
 character.loopFrames(
@@ -187,56 +187,5 @@ character.rule(Predicate.MovingUp)
 scene.cameraFollowSprite(The_Player)
 tiles.placeOnRandomTile(The_Player, assets.tile`Tilled Soil`)
 tiles.coverAllTiles(assets.tile`Tilled Soil`, assets.tile`Grass`)
-let Tools = [img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . 4 4 4 4 4 4 4 . 4 4 4 4 
-    . . 4 4 e e e e e e e 4 . e e . 
-    . 4 . 4 4 4 4 4 4 4 4 4 . 4 4 . 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 . . 
-    4 . . 4 4 4 4 4 4 4 4 4 4 . . . 
-    4 . . 4 4 4 4 4 4 4 4 4 . . . . 
-    4 . . 4 4 4 4 4 4 4 4 4 . . . . 
-    4 . . 4 4 4 4 4 4 4 4 4 . . . . 
-    e . . e 4 4 4 4 4 4 4 4 . . . . 
-    . e . e 4 4 4 4 4 4 4 4 . . . . 
-    . . e e e e e e e e e 4 . . . . 
-    `, img`
-    . . . . . . . . . . . . . . . . 
-    . . . 4 . . . . . . . . . . . . 
-    . . . e 4 . . . . . . . . . . . 
-    . . . . e 4 . . . . . . . . . . 
-    . . . . . e 4 . . . . . . . . . 
-    . . . . . . e 4 . . . . . . . . 
-    . . . . . . . e 4 . . . . . . . 
-    . . . . . . . . e 4 . . . . . . 
-    . . . . . . . . . e 4 . . b . . 
-    . . . . . . . . . . e 4 b b b . 
-    . . . . . . . . . . . b b b b b 
-    . . . . . . . . . . c b b b b b 
-    . . . . . . . . . . . c b b b b 
-    . . . . . . . . . . . . c c c . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, img`
-    . . b b b . . . . . . . . . . . 
-    . b b . . . . . . . . . . . . . 
-    . b b . . . . . . . . . . . . . 
-    b b e 4 . . . . . . . . . . . . 
-    b . . e 4 . . . . . . . . . . . 
-    . . . . e 4 . . . . . . . . . . 
-    . . . . . e 4 . . . . . . . . . 
-    . . . . . . e 4 . . . . . . . . 
-    . . . . . . . e 4 . . . . . . . 
-    . . . . . . . . e 4 . . . . . . 
-    . . . . . . . . . e 4 . . . . . 
-    . . . . . . . . . . e 4 . . . . 
-    . . . . . . . . . . . e 4 . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `]
+let Tools = [assets.image`Watering Can`, assets.image`Shovel`, assets.image`Hoe`]
 let Tool_Names = 0
